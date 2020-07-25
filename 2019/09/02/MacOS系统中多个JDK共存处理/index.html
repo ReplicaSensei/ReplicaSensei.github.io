@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://replica.me">
   <title>MacOS系统中多个JDK共存处理 | ReplicaSensei的星球</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="参考链接：https://blog.csdn.net/m0_37208669/article/details/84625465 下载JDK前往oracle官网下载需要的JDK版本,如果需要老版本的JDK需要自行百度下载 配置bash_profile 在终端输入命令行‘ open -e .bash_profile ‘  在打开的文本中添加以下代码 export JAVA_BASE_HOME=/Lib">
+  <meta name="description" content="参考链接：https://blog.csdn.net/m0_37208669/article/details/84625465 下载JDK前往oracle官网下载需要的JDK版本,如果需要老版本的JDK需要自行百度下载 配置bash_profile 在终端输入命令行‘ open -e .bash_profile ‘ 在打开的文本中添加以下代码12345678export JAVA_BASE_HOM">
 <meta name="keywords" content="JDK for MacOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MacOS系统中多个JDK共存处理">
 <meta property="og:url" content="http://replica.me/2019/09/02/MacOS系统中多个JDK共存处理/index.html">
 <meta property="og:site_name" content="ReplicaSensei的星球">
-<meta property="og:description" content="参考链接：https://blog.csdn.net/m0_37208669/article/details/84625465 下载JDK前往oracle官网下载需要的JDK版本,如果需要老版本的JDK需要自行百度下载 配置bash_profile 在终端输入命令行‘ open -e .bash_profile ‘  在打开的文本中添加以下代码 export JAVA_BASE_HOME=/Lib">
+<meta property="og:description" content="参考链接：https://blog.csdn.net/m0_37208669/article/details/84625465 下载JDK前往oracle官网下载需要的JDK版本,如果需要老版本的JDK需要自行百度下载 配置bash_profile 在终端输入命令行‘ open -e .bash_profile ‘ 在打开的文本中添加以下代码12345678export JAVA_BASE_HOM">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-13T06:06:27.223Z">
+<meta property="og:updated_time" content="2020-07-25T08:00:22.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MacOS系统中多个JDK共存处理">
-<meta name="twitter:description" content="参考链接：https://blog.csdn.net/m0_37208669/article/details/84625465 下载JDK前往oracle官网下载需要的JDK版本,如果需要老版本的JDK需要自行百度下载 配置bash_profile 在终端输入命令行‘ open -e .bash_profile ‘  在打开的文本中添加以下代码 export JAVA_BASE_HOME=/Lib">
+<meta name="twitter:description" content="参考链接：https://blog.csdn.net/m0_37208669/article/details/84625465 下载JDK前往oracle官网下载需要的JDK版本,如果需要老版本的JDK需要自行百度下载 配置bash_profile 在终端输入命令行‘ open -e .bash_profile ‘ 在打开的文本中添加以下代码12345678export JAVA_BASE_HOM">
   
     <link rel="alternative" href="/atom.xml" title="ReplicaSensei的星球" type="application/atom+xml">
   
@@ -166,19 +166,12 @@
         <p>参考链接：<a href="https://blog.csdn.net/m0_37208669/article/details/84625465" target="_blank" rel="noopener">https://blog.csdn.net/m0_37208669/article/details/84625465</a></p>
 <h2 id="下载JDK"><a href="#下载JDK" class="headerlink" title="下载JDK"></a>下载JDK</h2><p>前往<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">oracle官网</a>下载需要的JDK版本,如果需要老版本的JDK需要自行百度下载</p>
 <h2 id="配置bash-profile"><a href="#配置bash-profile" class="headerlink" title="配置bash_profile"></a>配置bash_profile</h2><ul>
-<li><p>在终端输入命令行<br>‘ open -e .bash_profile ‘</p>
-</li>
-<li><p>在打开的文本中添加以下代码</p>
-<pre><code>export JAVA_BASE_HOME=/Library/Java/JavaVirtualMachines
-export JAVA_11_HOME=$JAVA_BASE_HOME/jdk-11.0.4.jdk/Contents/Home
-export JAVA_12_HOME=$JAVA_BASE_HOME/jdk-12.0.2.jdk/Contents/Home
-export JAVA_HOME=$JAVA_8_HOME
+<li>在终端输入命令行<br>‘ open -e .bash_profile ‘</li>
+<li>在打开的文本中添加以下代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_BASE_HOME=/Library/Java/JavaVirtualMachines</span><br><span class="line">export JAVA_11_HOME=$JAVA_BASE_HOME/jdk-11.0.4.jdk/Contents/Home</span><br><span class="line">export JAVA_12_HOME=$JAVA_BASE_HOME/jdk-12.0.2.jdk/Contents/Home</span><br><span class="line">export JAVA_HOME=$JAVA_8_HOME</span><br><span class="line"></span><br><span class="line">#以下为定义对应JDK版本的变量名</span><br><span class="line">alias jdk11=&apos;export JAVA_HOME=$JAVA_11_HOME&apos;</span><br><span class="line">alias jdk12=&apos;export JAVA_HOME=$JAVA_12_HOME&apos;</span><br></pre></td></tr></table></figure>
 
-#以下为定义对应JDK版本的变量名
-alias jdk11=&apos;export JAVA_HOME=$JAVA_11_HOME&apos;
-alias jdk12=&apos;export JAVA_HOME=$JAVA_12_HOME&apos;</code></pre><p>这里我的JDK版本是11.0.4和12.0.2，根据自己下载的jdk可自行修改代码</p>
 </li>
 </ul>
+<p>这里我的JDK版本是11.0.4和12.0.2，根据自己下载的jdk可自行修改代码</p>
 <h2 id="source"><a href="#source" class="headerlink" title="source"></a>source</h2><p>修改保存配置文件后，在终端执行命令行<br>  ‘ source .bash_profile ‘</p>
 <h2 id="切换JDK版本"><a href="#切换JDK版本" class="headerlink" title="切换JDK版本"></a>切换JDK版本</h2><p>命令行执行对应JDK版本的变量名即可切换JDK版本,<br>例如我在终端执行命令行jdk11 即可切换11.0.4版本的JDK</p>
 
@@ -428,11 +421,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JDK for MacOS</a>
+                <a href="javascript:void(0)" class="js-tag color2">记录第一天使用hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">记录第一天使用hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">JDK for MacOS</a>
               </li>
             
             <div class="clearfix"></div>
