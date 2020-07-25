@@ -70,8 +70,6 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
     			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
@@ -145,6 +143,526 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Hexo-Command" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/25/Hexo-Command/">Hexo Command</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/25/Hexo-Command/" class="archive-article-date">
+  	<time datetime="2020-07-25T07:31:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/25/Hexo-Command/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-北林839数据结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="《数据结构》考试大纲"><a href="#《数据结构》考试大纲" class="headerlink" title="《数据结构》考试大纲"></a>《数据结构》考试大纲</h1><h2 id="一、考试范围和内容"><a href="#一、考试范围和内容" class="headerlink" title="一、考试范围和内容"></a>一、考试范围和内容</h2><h3 id="1-数据结构基本概念"><a href="#1-数据结构基本概念" class="headerlink" title="1.数据结构基本概念"></a>1.数据结构基本概念</h3><h4 id="1-数据结构的基本概念："><a href="#1-数据结构的基本概念：" class="headerlink" title="(1) 数据结构的基本概念："></a>(1) 数据结构的基本概念：</h4><p>数据<br>数据元素<br>数据结构<br>数据的逻辑结构<br>物理结构<br>算法</p>
+<h4 id="2-算法时间复杂度和空间复杂度的分析方法-p12"><a href="#2-算法时间复杂度和空间复杂度的分析方法-p12" class="headerlink" title="(2) 算法时间复杂度和空间复杂度的分析方法(p12)"></a>(2) 算法时间复杂度和空间复杂度的分析方法(p12)</h4><h3 id="2-线性表"><a href="#2-线性表" class="headerlink" title="2.线性表"></a>2.线性表</h3><h4 id="1-线性表的定义（p19"><a href="#1-线性表的定义（p19" class="headerlink" title="(1)线性表的定义（p19)"></a>(1)线性表的定义（p19)</h4><h4 id="2-线性表的顺序存储结构和主要算法实现"><a href="#2-线性表的顺序存储结构和主要算法实现" class="headerlink" title="(2)线性表的顺序存储结构和主要算法实现"></a>(2)线性表的顺序存储结构和主要算法实现</h4><ul>
+<li><p>查找</p>
+<pre><code>int LocateElem(SqList L, ElemType e)
+{
+ for(i=0; i&lt;L.length; i++)
+ {
+     if(L.elem[i]==e)
+     {
+         return i+1;
+     }
+     return 0;
+ }   
+}</code></pre></li>
+<li><p>插入</p>
+<pre><code>Status ListInsert(SqList &amp;L, int i, ElemType e)
+{
+    if((i&lt;1)||(i&gt;L.length+1))
+    {
+        return ERROR;
+    }
+    if(L.length==MAXSIZE)
+    {
+        return ERROR;
+    }
+    for(j=L.length-1; j&gt;=i-1; j--)
+    {
+        L.elem[j+1]=L.elem[j];
+    }
+    L.elem[i-1]=e;
+    ++L.length;
+    return OK;
+}</code></pre></li>
+<li><p>删除</p>
+<pre><code>Status ListDelete(SqList &amp;L, int i)
+{
+    if((i&lt;1)||(i&gt;L.length))
+    {
+        return ERROR;
+    }
+    for(j=i; j&lt;=L.length-1; j++)
+    {
+        L.elem[j-1]=L.elem[j];
+    }
+    --L.length;
+    return OK;
+}</code></pre><h4 id="3-线性表的链式存储结构和主要算法实现"><a href="#3-线性表的链式存储结构和主要算法实现" class="headerlink" title="(3)线性表的链式存储结构和主要算法实现"></a>(3)线性表的链式存储结构和主要算法实现</h4></li>
+<li><p>查找(findbyid)</p>
+<pre><code>Status GetElem(LinkList L, int i, ElemType &amp;e)
+{
+    p=L-&gt;next;
+    j=1;
+    while(p&amp;&amp;j&lt;i)
+    {
+        p=p-&gt;next;
+        ++j;
+    }
+    if(!p||j&gt;i)
+    {
+        return ERROR;
+    }
+    e=p-&gt;data;
+    return OK;
+}</code></pre></li>
+<li><p>查找(findbydata)</p>
+<pre><code>LNode *LocateElem(LinkList L, ElemType e)
+{
+    p=L-&gt;next;
+    while(p&amp;&amp;p-&gt;data!=e)
+    {
+        p=p-&gt;next;
+    }
+    return p;
+}</code></pre></li>
+<li><p>插入</p>
+<pre><code>Status ListInsert(LinkList &amp;L, int i, ElemType e)
+{
+    p=L;
+    j=0;
+    while(p &amp;&amp; (j&lt;i-1))
+    {
+        p=p-&gt;next;
+        ++j;
+    }
+    if(!p||j&gt;i-1)
+    {
+        return ERROR;
+    }
+    s=new LNode;
+    s-&gt;data=e;
+    s-&gt;next=p-&gt;next;
+    p-&gt;next=s;
+    return OK;
+}</code></pre></li>
+<li><p>删除</p>
+<pre><code>Status ListDelete(LinkList &amp;l, int i)
+{
+    p=L;
+    j=0;
+    while((p-&gt;next)&amp;&amp;(j&lt;i-1))
+    {
+        p=p-&gt;next;
+        ++j;
+    }
+    if(!(p-&gt;next)||(j&gt;i-1))
+    {
+        return ERROR;
+    }
+    q=p-&gt;next;
+    p-&gt;next=q-&gt;next;
+    delete q;
+    return OK;
+}</code></pre><h4 id="4-循环链表、双向链表的特点-p38"><a href="#4-循环链表、双向链表的特点-p38" class="headerlink" title="(4) 循环链表、双向链表的特点(p38)"></a>(4) 循环链表、双向链表的特点(p38)</h4><h4 id="5-从时间和空间复杂度的角度比较两种存储结构的不同特点及其适用场合-p41"><a href="#5-从时间和空间复杂度的角度比较两种存储结构的不同特点及其适用场合-p41" class="headerlink" title="(5) 从时间和空间复杂度的角度比较两种存储结构的不同特点及其适用场合(p41)"></a>(5) 从时间和空间复杂度的角度比较两种存储结构的不同特点及其适用场合(p41)</h4><h4 id="6-线性表的应用，如线性表的合并算法。"><a href="#6-线性表的应用，如线性表的合并算法。" class="headerlink" title="(6) 线性表的应用，如线性表的合并算法。"></a>(6) 线性表的应用，如线性表的合并算法。</h4></li>
+<li><p>顺序有序表合并</p>
+<pre><code>void MergeList_Sq(SqList La, SqList Lb, SqList Lc)
+{
+    Lc.length=Lb.length+Lc.length;
+    Lc.elem=new ElemType[Lc.length];
+    pc=Lc.elem;
+    pa=La.elem;
+    pb=Lb.elem;
+    pa_last=La.elem+La.length-1;
+    pb_last=Lb.elem+Lb.length-1;
+    while((pa&lt;=pa_last)&amp;&amp;(pb&lt;=pb_last))
+    {
+        if(*pa&lt;=*pb)
+        {
+            *pc++ = *pa++;
+        }
+        else
+        {
+            *pc++ = *pb++;
+        }
+    }
+    while(pa&lt;=pa_last)
+    {
+        *pc++ = *pa++;
+    }
+    while(pb&lt;=pb_last)
+    {
+        *pc++ = *pb++;
+    }
+}</code></pre></li>
+<li><p>链式有序表的合并</p>
+<pre><code>void MergeList_L(LinkList &amp;La, LinkList &amp;Lb, LinkList &amp;Lc)
+{
+    pa=La-&gt;next;
+    pb=Lb-&gt;next;
+    Lc=La;
+    pc=Lc;
+    while(pa&amp;&amp;pb)
+    {
+        if(pa-&gt;data&lt;=pb.data)
+        {
+            pc-&gt;next=pa;
+            pc=pa;
+            pa=pa-&gt;next;
+        }
+        else
+        {
+            pc-&gt;next=pb;
+            pc=pb;
+            pb=pb-&gt;next;
+        }
+    }
+    pc-&gt;next=pa?pa:pb;
+    delete Lb;
+}</code></pre><h3 id="3-栈和队列"><a href="#3-栈和队列" class="headerlink" title="3.栈和队列"></a>3.栈和队列</h3><h4 id="1-栈的定义及特点，栈的顺序存储和链接存储结构，进栈出栈算法，顺序栈栈满和栈空的条件。"><a href="#1-栈的定义及特点，栈的顺序存储和链接存储结构，进栈出栈算法，顺序栈栈满和栈空的条件。" class="headerlink" title="(1) 栈的定义及特点，栈的顺序存储和链接存储结构，进栈出栈算法，顺序栈栈满和栈空的条件。"></a>(1) 栈的定义及特点，栈的顺序存储和链接存储结构，进栈出栈算法，顺序栈栈满和栈空的条件。</h4></li>
+<li><p>顺序入栈</p>
+<pre><code>Status Push(SqStack &amp;S, SElemType e)
+{
+    if(S.top-S.base==S.stacksize)   //栈满
+    {
+        return ERROR;
+    }
+    *S.top++=e;
+    return OK;
+}</code></pre></li>
+<li><p>链式入栈</p>
+<pre><code>Status Push(LinkStack &amp;S, SElemType e)
+{
+    p=new StackNode;
+    p-&gt;data=e;
+    p-&gt;next=S;
+    S=p;
+    return OK;
+}</code></pre></li>
+<li><p>顺序出栈</p>
+<pre><code>Status Pop(SqStack &amp;S, SElemType &amp;e)
+{
+    if(S.top==S.base)   //栈空
+    {
+        return ERROR;
+    }
+    e=*--S.top;
+    return OK;
+}</code></pre></li>
+<li><p>链式出栈</p>
+<pre><code>Status Pop(LinkStack &amp;S, SElemType &amp;e)
+{
+    if(S==NULL)
+    {
+        return ERROR;
+    }
+    e=S-&gt;data;
+    p=S;
+    S=S-&gt;next;
+    delete p;
+    return OK;
+}</code></pre><h4 id="2-栈的应用，如表达式求值算法，借助栈深入理解递归算法。"><a href="#2-栈的应用，如表达式求值算法，借助栈深入理解递归算法。" class="headerlink" title="(2) 栈的应用，如表达式求值算法，借助栈深入理解递归算法。"></a>(2) 栈的应用，如表达式求值算法，借助栈深入理解递归算法。</h4></li>
+<li><p>表达式求值</p>
+<pre><code>char EvaluateExpression()
+{
+    InitStack(OPND);    //OPND用以寄存操作数或运算结果
+    InitStack(OPTR);    //OPTR用以寄存运算符
+    Push(OPTR, &apos;#&apos;);    //将表达式起始符‘#’压入OPTR栈
+    cin&gt;&gt;ch;
+    while(ch!=&apos;#&apos;||GetTop(OPTR)!=&apos;#&apos;)
+    {
+        if(!In(ch))     //若ch不是运算符则进入OPND栈
+        {
+            Push(OPND, ch);
+            cin&gt;&gt;ch;
+        }
+        else
+        {
+            switch(Precede(GetTop(OPTR), ch))   //比较OPTR栈顶运算符和ch的优先级
+            {
+                case &apos;&lt;&apos;:
+                    Push(OPTR, ch);
+                    cin&gt;&gt;ch;
+                    break;
+                case &apos;&gt;&apos;:
+                    Pop(OPTR, theta);   //弹出OPTR栈顶的运算符
+                    Pop(OPND, b);   
+                    Pop(OPND, a);   //弹出OPND栈顶的两个运算数
+                    Push(OPND, Operate(a, theta, b));   //将运算结果压入OPND栈
+                    break;
+                case &apos;=&apos;:
+                    Pop(OPTR, x);   //弹出OPTR栈顶的“（”
+                    cin&gt;&gt;ch;
+                    break;
+
+            }
+        }
+    }
+    return GetTop(OPND);
+}</code></pre><h4 id="3-队列的定义及特点，队列的顺序存储-循环队-和链接存储结构，进队出队算法，循环队列中队满及队空的条件。"><a href="#3-队列的定义及特点，队列的顺序存储-循环队-和链接存储结构，进队出队算法，循环队列中队满及队空的条件。" class="headerlink" title="(3) 队列的定义及特点，队列的顺序存储(循环队)和链接存储结构，进队出队算法，循环队列中队满及队空的条件。"></a>(3) 队列的定义及特点，队列的顺序存储(循环队)和链接存储结构，进队出队算法，循环队列中队满及队空的条件。</h4></li>
+<li><p>循环队列进队</p>
+<pre><code>Status EnQueue(SqQueue &amp;Q, QElemType e)
+{
+    if((Q.rear+1)%MAXQSIZE==Q.front)    //队满
+    {
+        return ERROR;
+    }
+    Q.base[Q.rear]=e;   //新元素插入队尾
+    Q.rear=(Q.rear+1)%MAXQSIZE; //队尾指针加1
+    return OK;
+}</code></pre></li>
+<li><p>链式队列进队</p>
+<pre><code>Status EnQueue(LinkQueue &amp;Q, QElemType e)
+{
+    p=new QNode;    //分配结点空间
+    p-&gt;data=e;      //数据域置为e
+    p-&gt;next=NULL;
+    Q.rear-&gt;next=p;     //新结点插入队尾
+    Q.rear=p;       //修改队尾指针
+    return OK;
+}</code></pre></li>
+<li><p>循环队列出队</p>
+<pre><code>Status DeQueue(SqQueue &amp;Q, QElemType &amp;e)
+{
+    if(Q.front==Q.rear)     //队空
+    {
+        return ERROR;
+    }
+    e=Q.base[Q.front];      //保存队头元素
+    Q.front=[Q.front+1]%MAXQSIZE;       //队头指针加1
+    return OK;
+}</code></pre></li>
+<li><p>链式队列出队</p>
+<pre><code>Status DeQueue(LinkQueue &amp;Q, QElemType &amp;e)
+{
+    if(Q.front==Q.base)
+    {
+        return ERROR;
+    }
+    p=Q.front-&gt;next;    //p指向队头元素
+    e=p-&gt;data;      //e保存队头元素的值
+    Q.front-&gt;next=p-&gt;next;      //修改头结点的指针域
+    if(Q.rear==p)       //最后一个元素被删，队尾指针指向头结点
+    {
+        Q.rear=Q.front;
+    }
+    delete p;   //释放原队头元素的空间
+    return OK;
+}</code></pre><h3 id="4-串和数组"><a href="#4-串和数组" class="headerlink" title="4. 串和数组"></a>4. 串和数组</h3><h4 id="1-串的定义-p87"><a href="#1-串的定义-p87" class="headerlink" title="(1) 串的定义:p87"></a>(1) 串的定义:p87</h4><h4 id="2-串的古典模式匹配算法。"><a href="#2-串的古典模式匹配算法。" class="headerlink" title="(2) 串的古典模式匹配算法。"></a>(2) 串的古典模式匹配算法。</h4></li>
+<li><p>BF算法</p>
+<pre><code>int Index_BF(SString S, SString T, int pos)
+{   //返回模式T在主串S中第pos个字符开始第一次出现的位置。若不存在，则返回值为0
+    //其中，T非空，1&lt;=pos&lt;=S.length
+    int i=pos;
+    int j=1;
+    while(i&lt;=S.length &amp;&amp; j&lt;=T.length)   //两个串均为比较到串尾
+    {
+        if(S.ch[i]==T.ch[j])    //若当前字符相同则继续比较后继字符
+        {
+            ++i;
+            ++j;
+        }
+        else    //若不相同则指针后退重新开始匹配
+        {
+            i=i-j+2;
+            j=1;
+        }
+    }
+    if(j&gt;T.length)  //匹配成功
+    {
+        return i-T.length;
+    }
+    else    //匹配失败
+    {
+        return 0;
+    }
+}</code></pre><h4 id="3-数组地址的计算方法-https-blog-csdn-net-qq-15037231-article-details-52280687"><a href="#3-数组地址的计算方法-https-blog-csdn-net-qq-15037231-article-details-52280687" class="headerlink" title="(3) 数组地址的计算方法:https://blog.csdn.net/qq_15037231/article/details/52280687"></a>(3) 数组地址的计算方法:<a href="https://blog.csdn.net/qq_15037231/article/details/52280687" target="_blank" rel="noopener">https://blog.csdn.net/qq_15037231/article/details/52280687</a></h4><h4 id="4-特殊矩阵的压缩存储方法：https-blog-csdn-net-qq-29721419-article-details-70482392"><a href="#4-特殊矩阵的压缩存储方法：https-blog-csdn-net-qq-29721419-article-details-70482392" class="headerlink" title="(4) 特殊矩阵的压缩存储方法：https://blog.csdn.net/qq_29721419/article/details/70482392"></a>(4) 特殊矩阵的压缩存储方法：<a href="https://blog.csdn.net/qq_29721419/article/details/70482392" target="_blank" rel="noopener">https://blog.csdn.net/qq_29721419/article/details/70482392</a></h4></li>
+</ul>
+<h3 id="5-树和二叉树"><a href="#5-树和二叉树" class="headerlink" title="5. 树和二叉树"></a>5. 树和二叉树</h3><h4 id="1-二叉树的定义和性质-p111"><a href="#1-二叉树的定义和性质-p111" class="headerlink" title="(1) 二叉树的定义和性质:p111"></a>(1) 二叉树的定义和性质:p111</h4><h4 id="2-二叉树的两种存储结构：顺序存储和链式存储。"><a href="#2-二叉树的两种存储结构：顺序存储和链式存储。" class="headerlink" title="(2) 二叉树的两种存储结构：顺序存储和链式存储。"></a>(2) 二叉树的两种存储结构：顺序存储和链式存储。</h4><h4 id="3-二叉树的创建和三种不同遍历算法，利用遍历算法实现二叉树的其他操作，如计算二叉树结点个数、叶子结点个数、二叉树的高度等算法。"><a href="#3-二叉树的创建和三种不同遍历算法，利用遍历算法实现二叉树的其他操作，如计算二叉树结点个数、叶子结点个数、二叉树的高度等算法。" class="headerlink" title="(3) 二叉树的创建和三种不同遍历算法，利用遍历算法实现二叉树的其他操作，如计算二叉树结点个数、叶子结点个数、二叉树的高度等算法。"></a>(3) 二叉树的创建和三种不同遍历算法，利用遍历算法实现二叉树的其他操作，如计算二叉树结点个数、叶子结点个数、二叉树的高度等算法。</h4><ul>
+<li>创建</li>
+</ul>
+<p>1.先序创建</p>
+<pre><code>typedef struct node 
+{
+    struct node *lchild;
+    struct node *rchild;
+    chat data;
+}BiTreeNode, *BiTree;
+
+void createBiTree(BiTree &amp;T)
+{
+    char c;
+    cin&gt;&gt;c;
+    if(c==&apos;#&apos;)
+    {
+        T=NULL;
+    }
+    else
+    {
+        T = new BiTreeNode;
+        T-&gt;data = c;
+        createBiTree(T-&gt;lchild);
+        createBiTree(T-&gt;rchild);
+    }
+}</code></pre><ul>
+<li>遍历</li>
+</ul>
+<p>1.先序遍历（根左右）<br>2.中序遍历（左根右）</p>
+<ul>
+<li><p>递归</p>
+<pre><code>void InOrderTraverse(BiTree T)
+{
+    if(T)
+    {
+        InOrderTraverse(T-&gt;lchild);
+        cout&lt;&lt;T-&gt;data&lt;&lt;&quot; &quot;;
+        InOrderTraverse(T-&gt;rchild);
+    }
+}</code></pre></li>
+<li><p>非递归</p>
+<pre><code>void InOrderTraverse(BiTree T)
+{
+    InitStack(S);
+    BiTree p = T;
+    while(p || !IsEmpty(S))
+    {
+        if(p)
+        {
+            Push(S,p);
+            p=p-&gt;lchild;
+        }
+        else
+        {
+            Pop(S,p);
+            cout&lt;&lt;p-&gt;data&lt;&lt;&quot; &quot;;
+            p=p-&gt;rchild;
+        }
+    }
+}</code></pre></li>
+</ul>
+<p>3.后续遍历（左右根）</p>
+<ul>
+<li>二叉树结点个数：n=n0+n1+n2 n=n1+2n2+1</li>
+<li>完全二叉树：n1=0/1</li>
+<li>Huffman：n1=0</li>
+<li>二叉树叶子结点个数：n0=n2+1</li>
+<li>高度为k：<br>1.每层结点数：1&lt;=n&lt;=2^k-1<br>2.总结点数：k&lt;=n&lt;=2^(k-1)</li>
+<li>分支数：B=n1=2n2<h4 id="4-线索二叉树的特性及构造方法。"><a href="#4-线索二叉树的特性及构造方法。" class="headerlink" title="(4) 线索二叉树的特性及构造方法。"></a>(4) 线索二叉树的特性及构造方法。</h4></li>
+<li>特性：lchild LTag data RTag rchild    其中LTag为0时lchild指向结点的左孩子，LTag为1时lchild指向结点的前驱；RTag同理。</li>
+<li>构造方法：p129<h4 id="5-树和森林的定义、存储结构与二叉树的转换方法。"><a href="#5-树和森林的定义、存储结构与二叉树的转换方法。" class="headerlink" title="(5) 树和森林的定义、存储结构与二叉树的转换方法。"></a>(5) 树和森林的定义、存储结构与二叉树的转换方法。</h4></li>
+<li>定义：p132</li>
+<li>储存结构：<br>1.双亲表示法：data parent<br>2.孩子表示法：data child1 child2 … childd或data degree child1 child2 … childd<br>3.孩子兄弟法：firstchild data nextsibling<h4 id="6-树的应用，哈夫曼树及哈夫曼编码的构造算法、带权路径长度的计算。"><a href="#6-树的应用，哈夫曼树及哈夫曼编码的构造算法、带权路径长度的计算。" class="headerlink" title="(6) 树的应用，哈夫曼树及哈夫曼编码的构造算法、带权路径长度的计算。"></a>(6) 树的应用，哈夫曼树及哈夫曼编码的构造算法、带权路径长度的计算。</h4></li>
+<li>Huffman：p136</li>
+<li>带权路径长度：WPL=w1k1+w2k2+…+wnkn</li>
+</ul>
+<h3 id="6-图"><a href="#6-图" class="headerlink" title="6. 图"></a>6. 图</h3><h4 id="1-图的定义和性质。"><a href="#1-图的定义和性质。" class="headerlink" title="(1) 图的定义和性质。"></a>(1) 图的定义和性质。</h4><h4 id="2-图的两种存储结构：邻接矩阵和邻接表。"><a href="#2-图的两种存储结构：邻接矩阵和邻接表。" class="headerlink" title="(2) 图的两种存储结构：邻接矩阵和邻接表。"></a>(2) 图的两种存储结构：邻接矩阵和邻接表。</h4><h4 id="3-图的两种遍历策略：深度优先搜索算法和广度优先搜索算法。"><a href="#3-图的两种遍历策略：深度优先搜索算法和广度优先搜索算法。" class="headerlink" title="(3) 图的两种遍历策略：深度优先搜索算法和广度优先搜索算法。"></a>(3) 图的两种遍历策略：深度优先搜索算法和广度优先搜索算法。</h4><h4 id="4-图的基本应用，包括拓扑排序算法、求解最短路径的迪杰斯特拉算法、构造最小生成树的两种算法（普里姆算法和克鲁斯卡尔算法）。"><a href="#4-图的基本应用，包括拓扑排序算法、求解最短路径的迪杰斯特拉算法、构造最小生成树的两种算法（普里姆算法和克鲁斯卡尔算法）。" class="headerlink" title="(4) 图的基本应用，包括拓扑排序算法、求解最短路径的迪杰斯特拉算法、构造最小生成树的两种算法（普里姆算法和克鲁斯卡尔算法）。"></a>(4) 图的基本应用，包括拓扑排序算法、求解最短路径的迪杰斯特拉算法、构造最小生成树的两种算法（普里姆算法和克鲁斯卡尔算法）。</h4><h3 id="7-查找"><a href="#7-查找" class="headerlink" title="7. 查找"></a>7. 查找</h3><h4 id="1-线性表的查找：顺序查找和折半查找算法。"><a href="#1-线性表的查找：顺序查找和折半查找算法。" class="headerlink" title="(1) 线性表的查找：顺序查找和折半查找算法。"></a>(1) 线性表的查找：顺序查找和折半查找算法。</h4><h4 id="2-树表的查找：二叉排序树的定义，二叉排序树的创建、插入、删除和查找算法。"><a href="#2-树表的查找：二叉排序树的定义，二叉排序树的创建、插入、删除和查找算法。" class="headerlink" title="(2) 树表的查找：二叉排序树的定义，二叉排序树的创建、插入、删除和查找算法。"></a>(2) 树表的查找：二叉排序树的定义，二叉排序树的创建、插入、删除和查找算法。</h4><h4 id="3-散列表的查找：两种处理冲突的方法包括开放地址法（线性探测法、二次探测法）和链地址法。"><a href="#3-散列表的查找：两种处理冲突的方法包括开放地址法（线性探测法、二次探测法）和链地址法。" class="headerlink" title="(3) 散列表的查找：两种处理冲突的方法包括开放地址法（线性探测法、二次探测法）和链地址法。"></a>(3) 散列表的查找：两种处理冲突的方法包括开放地址法（线性探测法、二次探测法）和链地址法。</h4><ul>
+<li>开放地址法： H<sub>i</sub> = (H(key) + d<sub>i</sub>) % m<ol>
+<li>线性探测法：d<sub>i</sub> = 1,2,3,4,…,m-1</li>
+<li>二次探测法：d<sub>i</sub> = 1<sup>2</sup>,-1<sup>2</sup>,2<sup>2</sup>,-2<sup>2</sup>,…,k<sup>2</sup>,-k<sup>2</sup>(k&lt;=m/2)</li>
+</ol>
+</li>
+<li>链地址法：p225<h4 id="4-上述三种不同查找算法的分析，平均查找长度ASL的计算方法及时间复杂度分析，不同查找算法的适用场合。"><a href="#4-上述三种不同查找算法的分析，平均查找长度ASL的计算方法及时间复杂度分析，不同查找算法的适用场合。" class="headerlink" title="(4) 上述三种不同查找算法的分析，平均查找长度ASL的计算方法及时间复杂度分析，不同查找算法的适用场合。"></a>(4) 上述三种不同查找算法的分析，平均查找长度ASL的计算方法及时间复杂度分析，不同查找算法的适用场合。</h4></li>
+</ul>
+<h3 id="8-排序"><a href="#8-排序" class="headerlink" title="8. 排序"></a>8. 排序</h3><h4 id="1-排序的基本概念。"><a href="#1-排序的基本概念。" class="headerlink" title="(1) 排序的基本概念。"></a>(1) 排序的基本概念。</h4><h4 id="2-插入排序：直接插入排序、折半插入排序和希尔排序。"><a href="#2-插入排序：直接插入排序、折半插入排序和希尔排序。" class="headerlink" title="(2) 插入排序：直接插入排序、折半插入排序和希尔排序。"></a>(2) 插入排序：直接插入排序、折半插入排序和希尔排序。</h4><h4 id="3-交换排序：冒泡排序和快速排序。"><a href="#3-交换排序：冒泡排序和快速排序。" class="headerlink" title="(3) 交换排序：冒泡排序和快速排序。"></a>(3) 交换排序：冒泡排序和快速排序。</h4><h4 id="4-选择排序：简单选择排序和堆排序。"><a href="#4-选择排序：简单选择排序和堆排序。" class="headerlink" title="(4) 选择排序：简单选择排序和堆排序。"></a>(4) 选择排序：简单选择排序和堆排序。</h4><h4 id="5-归并排序：2-路归并排序。"><a href="#5-归并排序：2-路归并排序。" class="headerlink" title="(5) 归并排序：2-路归并排序。"></a>(5) 归并排序：2-路归并排序。</h4><h4 id="6-上述各种排序方法的特点和排序过程，时间和空间复杂度的分析，排序方法“稳定”或“不稳定”的含义。排序算法的实现及适用场合。"><a href="#6-上述各种排序方法的特点和排序过程，时间和空间复杂度的分析，排序方法“稳定”或“不稳定”的含义。排序算法的实现及适用场合。" class="headerlink" title="(6) 上述各种排序方法的特点和排序过程，时间和空间复杂度的分析，排序方法“稳定”或“不稳定”的含义。排序算法的实现及适用场合。"></a>(6) 上述各种排序方法的特点和排序过程，时间和空间复杂度的分析，排序方法“稳定”或“不稳定”的含义。排序算法的实现及适用场合。</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/28/北林839数据结构/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-MacOS系统中多个JDK共存处理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -324,7 +842,7 @@ alias jdk12=&apos;export JAVA_HOME=$JAVA_12_HOME&apos;</code></pre><p>这里我�
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 ReplicaSensei
+    		&copy; 2020 ReplicaSensei
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -365,8 +883,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -378,15 +894,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -457,38 +971,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
