@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://replica.me">
-  <title>Archives: 2020/7 | ReplicaSensei的星球</title>
+  <title>接口多态和编程原则 | ReplicaSensei的星球</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="聊城大学16级，考研奋斗ing。这是我的秘密星球～">
-<meta name="keywords" content="“考研,java,程序员,学生党&quot;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ReplicaSensei的星球">
-<meta property="og:url" content="http://replica.me/archives/2020/07/index.html">
+  <meta name="description" content="接口接口的多态：1234567891011121314151617181920212223public class TestPolymorpfic &amp;#123;  public static void main(String[] args) &amp;#123;    Dog myDog = new Dog();	//将狗当成狗看    Animal a = my Dog;	//将狗当成动物看    Ru">
+<meta name="keywords" content="Interface For Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="接口多态和编程原则">
+<meta property="og:url" content="http://replica.me/2020/07/28/接口多态和编程原则/index.html">
 <meta property="og:site_name" content="ReplicaSensei的星球">
-<meta property="og:description" content="聊城大学16级，考研奋斗ing。这是我的秘密星球～">
+<meta property="og:description" content="接口接口的多态：1234567891011121314151617181920212223public class TestPolymorpfic &amp;#123;  public static void main(String[] args) &amp;#123;    Dog myDog = new Dog();	//将狗当成狗看    Animal a = my Dog;	//将狗当成动物看    Ru">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-07-28T10:01:23.232Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ReplicaSensei的星球">
-<meta name="twitter:description" content="聊城大学16级，考研奋斗ing。这是我的秘密星球～">
+<meta name="twitter:title" content="接口多态和编程原则">
+<meta name="twitter:description" content="接口接口的多态：1234567891011121314151617181920212223public class TestPolymorpfic &amp;#123;  public static void main(String[] args) &amp;#123;    Dog myDog = new Dog();	//将狗当成狗看    Animal a = my Dog;	//将狗当成动物看    Ru">
   
     <link rel="alternative" href="/atom.xml" title="ReplicaSensei的星球" type="application/atom+xml">
   
@@ -142,74 +143,101 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-接口多态和编程原则" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/28/三大修饰符/" class="archive-article-date">
-  	<time datetime="2020-07-28T10:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/28/三大修饰符/">三大修饰符:abstract static final</a>
+    <h1 class="article-title" itemprop="name">
+      接口多态和编程原则
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">修饰符</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/28/接口多态和编程原则/" class="archive-article-date">
+        
+        <a href="/2020/07/28/接口多态和编程原则/" class="archive-article-date">
   	<time datetime="2020-07-28T02:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/28/接口多态和编程原则/">接口多态和编程原则</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><h2 id="接口的多态："><a href="#接口的多态：" class="headerlink" title="接口的多态："></a>接口的多态：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestPolymorpfic</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Dog myDog = <span class="keyword">new</span> Dog();	<span class="comment">//将狗当成狗看</span></span><br><span class="line">    Animal a = my Dog;	<span class="comment">//将狗当成动物看</span></span><br><span class="line">    Runnable r = myDog;	<span class="comment">//将狗当成会跑的东西看</span></span><br><span class="line">    Swimmable s = myDog;	<span class="comment">//将狗当成会游泳的东西看</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Swimmable</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">swim</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sleep</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> <span class="keyword">implements</span> <span class="title">Runnable</span>, <span class="title">Swimmable</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;&#125;	<span class="comment">//接口方法</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swim</span><span class="params">()</span></span>&#123;&#125;	<span class="comment">//接口方法</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shout</span><span class="params">()</span></span>&#123;&#125;	<span class="comment">//独有方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<h4 id="不同引用所能看到的对象范围不同，-只能调用自身类型中所声明的部分。"><a href="#不同引用所能看到的对象范围不同，-只能调用自身类型中所声明的部分。" class="headerlink" title="不同引用所能看到的对象范围不同， 只能调用自身类型中所声明的部分。"></a>不同引用所能看到的对象范围不同， 只能调用自身类型中所声明的部分。</h4><h2 id="接口总结"><a href="#接口总结" class="headerlink" title="接口总结"></a>接口总结</h2><h3 id="什么是接口："><a href="#什么是接口：" class="headerlink" title="什么是接口："></a>什么是接口：</h3><ul>
+<li>微观：接口是一种能力和约定。</li>
+<li>宏观：接口是一种标准。</li>
+</ul>
+<h3 id="接口与类的异同："><a href="#接口与类的异同：" class="headerlink" title="接口与类的异同："></a>接口与类的异同：</h3><ul>
+<li>没有构造方法，仅可定义公开静态常量与公开抽象方法。</li>
+</ul>
+<h3 id="接口的应用"><a href="#接口的应用" class="headerlink" title="接口的应用"></a>接口的应用</h3><ul>
+<li>Java为单继承，当父类的方法种类无法满足子类需求时，可实现接口扩充子类能力。</li>
+</ul>
+<h3 id="接口的规范"><a href="#接口的规范" class="headerlink" title="接口的规范"></a>接口的规范</h3><ul>
+<li>任何类在实现接口时，必须实现接口中所有的抽象方法，否则此类为抽象类。</li>
+<li>实现接口中的抽象方法时，访问修饰符必须是public。</li>
+</ul>
+<h3 id="什么是常量接口"><a href="#什么是常量接口" class="headerlink" title="什么是常量接口"></a>什么是常量接口</h3><ul>
+<li>将多个常用于表示状态或固定值的变量，以静态常量的形式定义在接口中统一管理。</li>
+</ul>
+<h3 id="什么是接口回调"><a href="#什么是接口回调" class="headerlink" title="什么是接口回调"></a>什么是接口回调</h3><ul>
+<li>先有接口的使用者，后有接口的实现者。</li>
+</ul>
+<h1 id="编程七大原则"><a href="#编程七大原则" class="headerlink" title="编程七大原则"></a>编程七大原则</h1><h2 id="开闭原则："><a href="#开闭原则：" class="headerlink" title="开闭原则："></a>开闭原则：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">程序的设计应该是不约束扩展，即扩展开放，但又不能修改已有功能，即修改关闭。因为在软件生命周期内，经常会出在原有功能基础上扩展新功能。这时，不能因为软件已经上线，不扩展新功能，但也不能直接修改旧的功能。正确的做法是，在原有功能上，扩展一个新的功能，新的需求依赖新的功能去实现。这样就既保证了老功能不受影响，有扩展了新功能。开闭原则一条非常重要的原则，可以说其它原则的基石。</span><br></pre></td></tr></table></figure>
+
+<h2 id="单一原则"><a href="#单一原则" class="headerlink" title="单一原则"></a>单一原则</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">就一个类而言，应该仅有一个引起它变化的原因。具体说，在做编程的时候，很自然的回个一个类加上各种各样的功能。这样意味着，无论任何需求要来，都需要更改这个类，这样其实是很糟糕的，维护麻烦，复用不可能，也缺乏灵活性。如果一个类承担的职责过多，就等于把这些职责耦合起来，一个职责变化可能会削弱或者抑制这个类完成其他职责的能力。这种耦合会导致设计很脆弱，当变化发生时，设计会遭到很多意想不到的破坏。</span><br></pre></td></tr></table></figure>
+
+<h2 id="代替原则（里氏代换原则）："><a href="#代替原则（里氏代换原则）：" class="headerlink" title="代替原则（里氏代换原则）："></a>代替原则（里氏代换原则）：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">派生类(子类)对象能够替换其基类(父类)对象被调用。这条原则主要是说，在程序中，任何调用基类对象实现的功能，都可以调用派生类对象来替换，当然，反过来是不行的。其实这里主要说的是继承问题，既然派生类继承基类，那它的对象也应该相应继承基类对象的实现，当然也就因该能替换基类对象。如果无法替换，就说明这个派生类继承有问题，需要修改设计。</span><br></pre></td></tr></table></figure>
+
+<h2 id="依赖倒转原则："><a href="#依赖倒转原则：" class="headerlink" title="依赖倒转原则："></a>依赖倒转原则：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这条原则说的是程序设计应该依赖抽象接口，而不应该依赖具体实现。经常听到的接口编程思想，其实说的主要就是这个原则。道理也很简单，接口是稳定的，实现是不稳定的。这也要求，一旦接口确定，就不应该再进行修改了。而根据接口的实现，是可以根据具体问题和情况，采用不同的手段去实现。</span><br></pre></td></tr></table></figure>
+
+<h2 id="接口隔离原则："><a href="#接口隔离原则：" class="headerlink" title="接口隔离原则："></a>接口隔离原则：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">接口隔离是说，使用多个隔离接口，比使用单个接口要好，还是一个降低类之间耦合度的意思。经常提到的降低耦合，降低依赖，主要也是通过这个原则来达到的。另外，这样设计接口也可以给使用者带来方便，因为，越小的接口，就越好实现，复用性也越高。</span><br></pre></td></tr></table></figure>
+
+<h2 id="最少原则（迪米特法则）"><a href="#最少原则（迪米特法则）" class="headerlink" title="最少原则（迪米特法则）:"></a>最少原则（迪米特法则）:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个实体应当尽可能少的与其他实体之间发生相互作用。这样做的目的在于减少依赖，独立功能，以便更好的复用。</span><br></pre></td></tr></table></figure>
+
+<h2 id="合成-聚合复用原则："><a href="#合成-聚合复用原则：" class="headerlink" title="合成/聚合复用原则："></a>合成/聚合复用原则：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在一个新的对象里面使用一些已有的对象，使之成为新对象的一部分，新的对象通过这些对象的委派达到复用已有功能的目的。设计原则是：尽量使用合成/聚合，尽量不要使用继承。</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢你请Replica喝茶<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -221,133 +249,115 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://replica.me/2020/07/28/接口多态和编程原则/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/28/面试题收藏/" class="archive-article-date">
-  	<time datetime="2020-07-27T18:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/07/28/三大修饰符/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          三大修饰符:abstract static final
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/28/面试题收藏/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试题收藏（持续更新中）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/28/面试题收藏/">面试题收藏（持续更新中）</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/27/Hexo_Command/" class="archive-article-date">
-  	<time datetime="2020-07-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/27/Hexo_Command/">Hexo_Command</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Hexo Command For Terminal</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/27/排序/" class="archive-article-date">
-  	<time datetime="2020-07-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/27/排序/">排序总结（持续更新中）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Sort For Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -370,8 +380,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
