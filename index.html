@@ -144,139 +144,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-面试题收藏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">show</span><span class="params">(D obj)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"A and D"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">show</span><span class="params">(A obj)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"A and A"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">show</span><span class="params">(B obj)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"B and B"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">show</span><span class="params">(A obj)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"B and A"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> <span class="keyword">extends</span> <span class="title">B</span></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span> <span class="keyword">extends</span> <span class="title">B</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">A a1 = <span class="keyword">new</span> A();	</span><br><span class="line">A a2 = <span class="keyword">new</span> B();	<span class="comment">//参数为A的方法被重写，只能调用参数为A和D的方法</span></span><br><span class="line">B b = <span class="keyword">new</span> B();	<span class="comment">//参数为A的防腐被重写，可以调用参数为A、B和D的方法</span></span><br><span class="line">C c = <span class="keyword">new</span> C();</span><br><span class="line">D d = <span class="keyword">new</span> D();</span><br><span class="line"></span><br><span class="line">a1.show(b):	<span class="comment">//A and A</span></span><br><span class="line">a1.show(c):	<span class="comment">//A and A</span></span><br><span class="line">a1.show(d):	<span class="comment">//A and D</span></span><br><span class="line">a2.show(b):	<span class="comment">//B and A</span></span><br><span class="line">a2.show(c):	<span class="comment">//B and A</span></span><br><span class="line">a2.show(d):	<span class="comment">//A and D</span></span><br><span class="line">b.show(b):	<span class="comment">//B and B</span></span><br><span class="line">b.show(c):	<span class="comment">//B and B</span></span><br><span class="line">b.show(d):	<span class="comment">//A and D</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestStatic</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Demo.show();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> Demo demo = <span class="keyword">new</span> Demo();	<span class="comment">//demo=null, count1=1, count2=1</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> count1;	<span class="comment">//count1=1</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> count2 = <span class="number">0</span>;	<span class="comment">//count2=0;</span></span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Demo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    count1++;</span><br><span class="line">    count2++;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"count1:"</span> + count1);	<span class="comment">//count1:1</span></span><br><span class="line">    System.out.println(<span class="string">"count2:"</span> + count2);	<span class="comment">//count2:0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/28/面试题收藏/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-三大修饰符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="三大修饰符"><a href="#三大修饰符" class="headerlink" title="三大修饰符"></a>三大修饰符</h1><h2 id="1-abstract"><a href="#1-abstract" class="headerlink" title="1.abstract"></a>1.abstract</h2><h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><ul>
-<li><p>修饰类:不能new对象，但可以声明引用。</p>
-</li>
-<li><p>修饰方法:只有方法声明，没有方法实现。（需包含在抽象类中）</p>
-</li>
-<li><p>抽象类中不一定有抽象方法，但有抽象方法的类一定是抽象类。</p>
-</li>
-<li><p>子类继承抽象类后，必须重写父类中所有的抽象方法，否则子类还是抽象类。</p>
-</li>
-</ul>
-<h2 id="2-static"><a href="#2-static" class="headerlink" title="2.static"></a>2.static</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h3><ul>
-<li>静态方法中可以直接访问静态成员，不可以直接访问非静态成员，不能使用this和super关键字。</li>
-<li>非静态方法中可以直接访问静态成员。</li>
-<li>静态方法可以继承，不能重写、没有多态。<h3 id="abstract-不能和static同时使用。"><a href="#abstract-不能和static同时使用。" class="headerlink" title="abstract 不能和static同时使用。"></a>abstract 不能和static同时使用。</h3></li>
-</ul>
-<h2 id="3-final"><a href="#3-final" class="headerlink" title="3.final"></a>3.final</h2><h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点:"></a>特点:</h3><h4 id="final修饰类：此类不能被继承"><a href="#final修饰类：此类不能被继承" class="headerlink" title="final修饰类：此类不能被继承"></a>final修饰类：此类不能被继承</h4><h4 id="final修饰方法-此方法不能被覆盖"><a href="#final修饰方法-此方法不能被覆盖" class="headerlink" title="final修饰方法:此方法不能被覆盖"></a>final修饰方法:此方法不能被覆盖</h4><h4 id="final修饰变量"><a href="#final修饰变量" class="headerlink" title="final修饰变量:"></a>final修饰变量:</h4><h5 id="1-final修饰局部变量-常量-赋值方式："><a href="#1-final修饰局部变量-常量-赋值方式：" class="headerlink" title="1.final修饰局部变量(常量)赋值方式："></a>1.final修饰局部变量(常量)赋值方式：</h5><ul>
-<li>声明时赋值</li>
-<li>只能赋值一次</li>
-</ul>
-<h5 id="2-final修饰实例变量-常量-赋值方式："><a href="#2-final修饰实例变量-常量-赋值方式：" class="headerlink" title="2.final修饰实例变量(常量)赋值方式："></a>2.final修饰实例变量(常量)赋值方式：</h5><ul>
-<li>声明时赋值</li>
-<li>构造方法中赋值</li>
-<li>只能赋值一次</li>
-</ul>
-<h5 id="3-final修饰类变量-常量-赋值方式："><a href="#3-final修饰类变量-常量-赋值方式：" class="headerlink" title="3.final修饰类变量(常量)赋值方式："></a>3.final修饰类变量(常量)赋值方式：</h5><ul>
-<li>声明时赋值</li>
-<li>在静态代码块赋值</li>
-<li>只能赋值一次</li>
-</ul>
-<h5 id="4-final修饰对象常量："><a href="#4-final修饰对象常量：" class="headerlink" title="4.final修饰对象常量："></a>4.final修饰对象常量：</h5><ul>
-<li>对象地址不可修改</li>
-<li>可修改对象属性</li>
-</ul>
-<h4 id="abstract不能和final同时使用"><a href="#abstract不能和final同时使用" class="headerlink" title="abstract不能和final同时使用"></a>abstract不能和final同时使用</h4>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/28/三大修饰符/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Hexo_Command" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -534,6 +401,112 @@
 
 
   
+    <article id="post-三大修饰符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/三大修饰符/">三大修饰符:abstract static final</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/02/三大修饰符/" class="archive-article-date">
+  	<time datetime="2019-09-01T18:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="三大修饰符"><a href="#三大修饰符" class="headerlink" title="三大修饰符"></a>三大修饰符</h1><h2 id="1-abstract"><a href="#1-abstract" class="headerlink" title="1.abstract"></a>1.abstract</h2><h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><ul>
+<li><p>修饰类:不能new对象，但可以声明引用。</p>
+</li>
+<li><p>修饰方法:只有方法声明，没有方法实现。（需包含在抽象类中）</p>
+</li>
+<li><p>抽象类中不一定有抽象方法，但有抽象方法的类一定是抽象类。</p>
+</li>
+<li><p>子类继承抽象类后，必须重写父类中所有的抽象方法，否则子类还是抽象类。</p>
+</li>
+</ul>
+<h2 id="2-static"><a href="#2-static" class="headerlink" title="2.static"></a>2.static</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h3><ul>
+<li>静态方法中可以直接访问静态成员，不可以直接访问非静态成员，不能使用this和super关键字。</li>
+<li>非静态方法中可以直接访问静态成员。</li>
+<li>静态方法可以继承，不能重写、没有多态。<h3 id="abstract-不能和static同时使用。"><a href="#abstract-不能和static同时使用。" class="headerlink" title="abstract 不能和static同时使用。"></a>abstract 不能和static同时使用。</h3></li>
+</ul>
+<h2 id="3-final"><a href="#3-final" class="headerlink" title="3.final"></a>3.final</h2><h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点:"></a>特点:</h3><h4 id="final修饰类：此类不能被继承"><a href="#final修饰类：此类不能被继承" class="headerlink" title="final修饰类：此类不能被继承"></a>final修饰类：此类不能被继承</h4><h4 id="final修饰方法-此方法不能被覆盖"><a href="#final修饰方法-此方法不能被覆盖" class="headerlink" title="final修饰方法:此方法不能被覆盖"></a>final修饰方法:此方法不能被覆盖</h4><h4 id="final修饰变量"><a href="#final修饰变量" class="headerlink" title="final修饰变量:"></a>final修饰变量:</h4><h5 id="1-final修饰局部变量-常量-赋值方式："><a href="#1-final修饰局部变量-常量-赋值方式：" class="headerlink" title="1.final修饰局部变量(常量)赋值方式："></a>1.final修饰局部变量(常量)赋值方式：</h5><ul>
+<li>声明时赋值</li>
+<li>只能赋值一次</li>
+</ul>
+<h5 id="2-final修饰实例变量-常量-赋值方式："><a href="#2-final修饰实例变量-常量-赋值方式：" class="headerlink" title="2.final修饰实例变量(常量)赋值方式："></a>2.final修饰实例变量(常量)赋值方式：</h5><ul>
+<li>声明时赋值</li>
+<li>构造方法中赋值</li>
+<li>只能赋值一次</li>
+</ul>
+<h5 id="3-final修饰类变量-常量-赋值方式："><a href="#3-final修饰类变量-常量-赋值方式：" class="headerlink" title="3.final修饰类变量(常量)赋值方式："></a>3.final修饰类变量(常量)赋值方式：</h5><ul>
+<li>声明时赋值</li>
+<li>在静态代码块赋值</li>
+<li>只能赋值一次</li>
+</ul>
+<h5 id="4-final修饰对象常量："><a href="#4-final修饰对象常量：" class="headerlink" title="4.final修饰对象常量："></a>4.final修饰对象常量：</h5><ul>
+<li>对象地址不可修改</li>
+<li>可修改对象属性</li>
+</ul>
+<h4 id="abstract不能和final同时使用"><a href="#abstract不能和final同时使用" class="headerlink" title="abstract不能和final同时使用"></a>abstract不能和final同时使用</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">修饰符</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/02/三大修饰符/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-今天加入了hexo，欢迎来到ReplicaSensei的星球" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -582,6 +555,85 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/02/今天加入了hexo，欢迎来到ReplicaSensei的星球/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-面试题收藏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/面试题收藏/">面试题收藏（持续更新中）</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/02/面试题收藏/" class="archive-article-date">
+  	<time datetime="2019-09-01T18:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">show</span><span class="params">(D obj)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"A and D"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">show</span><span class="params">(A obj)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"A and A"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">show</span><span class="params">(B obj)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"B and B"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">show</span><span class="params">(A obj)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">"B and A"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> <span class="keyword">extends</span> <span class="title">B</span></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span> <span class="keyword">extends</span> <span class="title">B</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">A a1 = <span class="keyword">new</span> A();	</span><br><span class="line">A a2 = <span class="keyword">new</span> B();	<span class="comment">//参数为A的方法被重写，只能调用参数为A和D的方法</span></span><br><span class="line">B b = <span class="keyword">new</span> B();	<span class="comment">//参数为A的防腐被重写，可以调用参数为A、B和D的方法</span></span><br><span class="line">C c = <span class="keyword">new</span> C();</span><br><span class="line">D d = <span class="keyword">new</span> D();</span><br><span class="line"></span><br><span class="line">a1.show(b):	<span class="comment">//A and A</span></span><br><span class="line">a1.show(c):	<span class="comment">//A and A</span></span><br><span class="line">a1.show(d):	<span class="comment">//A and D</span></span><br><span class="line">a2.show(b):	<span class="comment">//B and A</span></span><br><span class="line">a2.show(c):	<span class="comment">//B and A</span></span><br><span class="line">a2.show(d):	<span class="comment">//A and D</span></span><br><span class="line">b.show(b):	<span class="comment">//B and B</span></span><br><span class="line">b.show(c):	<span class="comment">//B and B</span></span><br><span class="line">b.show(d):	<span class="comment">//A and D</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestStatic</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Demo.show();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> Demo demo = <span class="keyword">new</span> Demo();	<span class="comment">//demo=null, count1=1, count2=1</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> count1;	<span class="comment">//count1=1</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> count2 = <span class="number">0</span>;	<span class="comment">//count2=0;</span></span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Demo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    count1++;</span><br><span class="line">    count2++;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"count1:"</span> + count1);	<span class="comment">//count1:1</span></span><br><span class="line">    System.out.println(<span class="string">"count2:"</span> + count2);	<span class="comment">//count2:0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/02/面试题收藏/">展开全文 >></a>
         </p>
       
 
@@ -700,11 +752,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo Command For Terminal</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JDK for MacOS</a>
+                <a href="javascript:void(0)" class="js-tag color4">修饰符</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -712,7 +760,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo Command For Terminal</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Sort For Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JDK for MacOS</a>
               </li>
             
             <div class="clearfix"></div>
