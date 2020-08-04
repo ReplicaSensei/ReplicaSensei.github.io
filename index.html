@@ -233,6 +233,306 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://replica.me/2020/08/01/集合/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ReplicaSensei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/head01.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Valley of End">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/01/集合/" itemprop="url">Collection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-01T08:31:54+08:00">
+                2020-08-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><h3 id="Collection体系集合"><a href="#Collection体系集合" class="headerlink" title="Collection体系集合 "></a>Collection体系集合 <interface></interface></h3><ul>
+<li>List<interface><ul>
+<li>ArrayList<class></class></li>
+<li>Vector<class></class></li>
+<li>LinkedList<class></class></li>
+</ul>
+</interface></li>
+<li>Set<interface><ul>
+<li>HashSet<class></class></li>
+<li>LinkedHashSet<class></class></li>
+<li>SortedSet<class><ul>
+<li>TreeSet<interface></interface></li>
+</ul>
+</class></li>
+</ul>
+</interface></li>
+</ul>
+<h3 id="Collection父接口"><a href="#Collection父接口" class="headerlink" title="Collection父接口"></a>Collection父接口</h3><ul>
+<li>特点：代表一组任意类型的对象，无序、无下标</li>
+<li>方法：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  Collection collection = <span class="keyword">new</span> ArrayList();</span><br><span class="line">  <span class="comment">//1.添加元素</span></span><br><span class="line">  collection.add(<span class="string">"上海"</span>);</span><br><span class="line">  collection.add(<span class="string">"北京"</span>);</span><br><span class="line">  collection.add(<span class="string">"杭州"</span>);</span><br><span class="line">  collection.add(<span class="string">"苏州"</span>);</span><br><span class="line">  collection.add(<span class="string">"南京"</span>);</span><br><span class="line">  collection.add(<span class="string">"南京"</span>);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + collection.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + collection.toString());</span><br><span class="line">  <span class="comment">//2.1 删除一个元素</span></span><br><span class="line">  collection.remove(<span class="string">"南京"</span>);</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + collection.toString());</span><br><span class="line">  <span class="comment">//2.2 清空元素</span></span><br><span class="line">  <span class="comment">//collection.clear();</span></span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + collection.toString());</span><br><span class="line">  <span class="comment">//3.遍历[重点] 增强for（编译器中语法为迭代器，不可删除操作）</span></span><br><span class="line">  System.out.println(<span class="string">"============增强for============"</span>);</span><br><span class="line">  <span class="keyword">for</span> (Object o : collection) &#123;</span><br><span class="line">    System.out.print (o + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  <span class="comment">//使用迭代器遍历集合</span></span><br><span class="line">  System.out.println(<span class="string">"============迭代器============="</span>);</span><br><span class="line">  Iterator it = collection.iterator();</span><br><span class="line">  <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">    <span class="comment">//Object o = it.next();</span></span><br><span class="line">    <span class="comment">//System.out.println(o);</span></span><br><span class="line">    System.out.print(it.next() + <span class="string">" "</span>);</span><br><span class="line">    <span class="comment">//删除</span></span><br><span class="line">    it.remove();</span><br><span class="line">    <span class="comment">//使用集合的删除方法</span></span><br><span class="line">    <span class="comment">//迭代过程中不能使用集合的删除方法，否则并发修改异常</span></span><br><span class="line">    <span class="comment">//collection.remove(o); //java.util.ConcurrentModificationException</span></span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  System.out.println(<span class="string">"元素个数："</span> + collection.size());</span><br><span class="line">  <span class="comment">//4.判断</span></span><br><span class="line">  <span class="comment">//4.1 判断元素是否存在</span></span><br><span class="line">  System.out.println(collection.contains(<span class="string">"北京"</span>));</span><br><span class="line">  <span class="comment">//4.2 判断是否为空</span></span><br><span class="line">  System.out.println(collection.isEmpty());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  Collection students = <span class="keyword">new</span> ArrayList();</span><br><span class="line">  <span class="comment">//1.添加元素</span></span><br><span class="line">  Student aa = <span class="keyword">new</span> Student(<span class="string">"aa"</span>, <span class="number">120</span>);</span><br><span class="line">  students.add(aa);</span><br><span class="line">  students.add(<span class="keyword">new</span> Student(<span class="string">"aa"</span>, <span class="number">19</span>));</span><br><span class="line">  students.add(<span class="keyword">new</span> Student(<span class="string">"bb"</span>, <span class="number">20</span>));</span><br><span class="line">  students.add(<span class="keyword">new</span> Student(<span class="string">"cc"</span>, <span class="number">21</span>));</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + students.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + students.toString());</span><br><span class="line">  <span class="comment">//2.删除</span></span><br><span class="line">  <span class="comment">//2.1 删除一个，ArrayList中比较的事equals方法</span></span><br><span class="line">  <span class="comment">//students.remove(aa);</span></span><br><span class="line">  <span class="comment">//System.out.println("删除之后:" + students.size());</span></span><br><span class="line">  <span class="comment">//3.遍历</span></span><br><span class="line">  <span class="comment">//3.1 增强for</span></span><br><span class="line">  System.out.println(<span class="string">"-----------增强for----------"</span>);</span><br><span class="line">  <span class="keyword">for</span> (Object student : students) &#123;</span><br><span class="line">    System.out.print(student.toString() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  <span class="comment">//3.2 使用迭代器</span></span><br><span class="line">  Iterator it = students.iterator();</span><br><span class="line">  <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">    Object obj = it.next();</span><br><span class="line">    System.out.print(obj + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  <span class="comment">//4.判断</span></span><br><span class="line">  <span class="comment">//4.1 判断是否存在</span></span><br><span class="line">  System.out.println(students.contains(<span class="keyword">new</span> Student(<span class="string">"aa"</span>, <span class="number">120</span>)));</span><br><span class="line">  <span class="comment">//4.2 判断是否为空</span></span><br><span class="line">  System.out.println(students.isEmpty());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h2><ul>
+<li><p>特点：</p>
+<ul>
+<li>有序</li>
+<li>有下标</li>
+<li>元素可以重复</li>
+</ul>
+</li>
+<li><p>方法</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  List list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">  <span class="comment">//1添加数字数据(自动装箱)</span></span><br><span class="line">  list.add(<span class="number">20</span>);</span><br><span class="line">  list.add(<span class="number">30</span>);</span><br><span class="line">  list.add(<span class="number">40</span>);</span><br><span class="line">  list.add(<span class="number">50</span>);</span><br><span class="line">  list.add(<span class="number">60</span>);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + list.size());</span><br><span class="line">  System.out.println(list.toString());</span><br><span class="line">  <span class="comment">//2删除操作</span></span><br><span class="line">  <span class="comment">//      list.remove(0);</span></span><br><span class="line">  <span class="comment">//		list.remove(new Integer(20));</span></span><br><span class="line">  <span class="comment">//		System.out.println("删除元素:"+list.size());</span></span><br><span class="line">  <span class="comment">//		System.out.println(list.toString());</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//3补充方法subList：返回子集合,含头不含尾</span></span><br><span class="line">  List subList = list.subList(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">  System.out.println(subList.toString());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="List实现类"><a href="#List实现类" class="headerlink" title="List实现类"></a>List实现类</h3><ul>
+<li>ArrayList:<ul>
+<li>数组结构实现，查询快、增删慢。</li>
+<li>JDK1.2版本，运行效率快，线程不安全。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合  size 0  容量 0，扩容原来的1.5倍</span></span><br><span class="line">  ArrayList arrayList=<span class="keyword">new</span> ArrayList();</span><br><span class="line">  <span class="comment">//1添加元素</span></span><br><span class="line">  Student s1=<span class="keyword">new</span> Student(<span class="string">"刘德华"</span>, <span class="number">20</span>);</span><br><span class="line">  Student s2=<span class="keyword">new</span> Student(<span class="string">"郭富城"</span>, <span class="number">22</span>);</span><br><span class="line">  Student s3=<span class="keyword">new</span> Student(<span class="string">"梁朝伟"</span>, <span class="number">18</span>);</span><br><span class="line">  arrayList.add(s1);</span><br><span class="line">  arrayList.add(s2);</span><br><span class="line">  arrayList.add(s3);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span>+arrayList.size());</span><br><span class="line">  System.out.println(arrayList.toString());</span><br><span class="line">  <span class="comment">//2删除元素</span></span><br><span class="line">  <span class="comment">//		arrayList.remove(new Student("刘德华", 20));//equals(this==obj)</span></span><br><span class="line">  <span class="comment">//		System.out.println("删除之后:"+arrayList.size());</span></span><br><span class="line">  <span class="comment">//3遍历元素【重点】</span></span><br><span class="line">  <span class="comment">//3.1使用迭代器</span></span><br><span class="line">  System.out.println(<span class="string">"-------3.1使用迭代器-----"</span>);</span><br><span class="line">  Iterator it=arrayList.iterator();</span><br><span class="line">  <span class="keyword">while</span>(it.hasNext()) &#123;</span><br><span class="line">    Student s=(Student)it.next();</span><br><span class="line">    System.out.println(s.toString());</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//3.2列表迭代器</span></span><br><span class="line">  ListIterator lit=arrayList.listIterator();</span><br><span class="line">  System.out.println(<span class="string">"-------3.2使用列表迭代器---------"</span>);</span><br><span class="line">  <span class="keyword">while</span>(lit.hasNext()) &#123;</span><br><span class="line">    Student s=(Student)lit.next();</span><br><span class="line">    System.out.println(s.toString());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  System.out.println(<span class="string">"-------3.2使用列表迭代器逆序---------"</span>);</span><br><span class="line">  <span class="keyword">while</span>(lit.hasPrevious()) &#123;</span><br><span class="line">    Student s=(Student)lit.previous();</span><br><span class="line">    System.out.println(s.toString());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//4判断</span></span><br><span class="line">  System.out.println(arrayList.contains(<span class="keyword">new</span> Student(<span class="string">"梁朝伟"</span>, <span class="number">18</span>)));</span><br><span class="line">  System.out.println(arrayList.isEmpty());</span><br><span class="line"></span><br><span class="line">  <span class="comment">//5查找</span></span><br><span class="line">  System.out.println(arrayList.indexOf(<span class="keyword">new</span> Student(<span class="string">"梁朝伟"</span>, <span class="number">18</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Vector<ul>
+<li>数组结构实现，查询快、增删慢。</li>
+<li>JDK1.0版本，运行效率慢，线程安全。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  Vector vector = <span class="keyword">new</span> Vector();</span><br><span class="line">  <span class="comment">//1.添加元素</span></span><br><span class="line">  vector.add(<span class="string">"榴莲"</span>);</span><br><span class="line">  vector.add(<span class="string">"樱桃"</span>);</span><br><span class="line">  vector.add(<span class="string">"桃子"</span>);</span><br><span class="line">  vector.add(<span class="string">"葡萄"</span>);</span><br><span class="line">  vector.add(<span class="string">"西瓜"</span>);</span><br><span class="line"></span><br><span class="line">  System.out.println(vector.toString());</span><br><span class="line"></span><br><span class="line">  <span class="comment">//2.删除</span></span><br><span class="line">  <span class="comment">//3.遍历</span></span><br><span class="line">  <span class="comment">//3.1 增强for</span></span><br><span class="line">  <span class="comment">//3.2 for</span></span><br><span class="line">  <span class="comment">//3.3 迭代器</span></span><br><span class="line">  <span class="comment">//3.4 列表迭代器</span></span><br><span class="line">  <span class="comment">//3.5 枚举器</span></span><br><span class="line">  Enumeration enumeration = vector.elements();</span><br><span class="line">  <span class="keyword">while</span> (enumeration.hasMoreElements()) &#123;</span><br><span class="line">    System.out.print(enumeration.nextElement() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>LinkedList<ul>
+<li>链表结构实现，增删快、查询慢。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  LinkedList linkedList = <span class="keyword">new</span> LinkedList();</span><br><span class="line">  Student s1 = <span class="keyword">new</span> Student(<span class="string">"刘德华"</span>, <span class="number">20</span>);</span><br><span class="line">  Student s2 = <span class="keyword">new</span> Student(<span class="string">"郭富城"</span>, <span class="number">22</span>);</span><br><span class="line">  Student s3 = <span class="keyword">new</span> Student(<span class="string">"梁朝伟"</span>, <span class="number">18</span>);</span><br><span class="line">  <span class="comment">//1.添加元素</span></span><br><span class="line">  linkedList.add(s1);</span><br><span class="line">  linkedList.add(s2);</span><br><span class="line">  linkedList.add(s3);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + linkedList.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + linkedList.toString());</span><br><span class="line">  <span class="comment">//2.删除</span></span><br><span class="line">  <span class="comment">//2.1 删除一个元素</span></span><br><span class="line">  <span class="comment">//        linkedList.remove(s1);</span></span><br><span class="line">  <span class="comment">//        System.out.println("删除之后:" + linkedList.toString());</span></span><br><span class="line">  <span class="comment">//2.2 清空</span></span><br><span class="line">  <span class="comment">//3.遍历</span></span><br><span class="line">  <span class="comment">//3.1 增强for</span></span><br><span class="line">  <span class="comment">//3.2 for</span></span><br><span class="line">  <span class="comment">//3.3 迭代器</span></span><br><span class="line">  Iterator it = linkedList.iterator();</span><br><span class="line">  <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">    System.out.print(it.next() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  <span class="comment">//3.4 列表迭代器</span></span><br><span class="line">  System.out.println(<span class="string">"--------从前向后---------"</span>);</span><br><span class="line">  ListIterator lit = linkedList.listIterator();</span><br><span class="line">  <span class="keyword">while</span> (lit.hasNext()) &#123;</span><br><span class="line">    System.out.print(lit.next() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  System.out.println(<span class="string">"--------从后向前---------"</span>);</span><br><span class="line">  <span class="keyword">while</span> (lit.hasPrevious()) &#123;</span><br><span class="line">    System.out.print(lit.previous() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  <span class="comment">//4.判断</span></span><br><span class="line">  System.out.println(linkedList.contains(s2));</span><br><span class="line">  System.out.println(linkedList.isEmpty());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ArrayList源码分析"><a href="#ArrayList源码分析" class="headerlink" title="ArrayList源码分析"></a>ArrayList源码分析</h3><ul>
+<li><p>分析:</p>
+<ul>
+<li><p>DEFAULT_CAPACITY = 10;默认容量</p>
+</li>
+<li><p>如果没有向集合中添加任何元素时，容量0,添加一个元素之后 容量10 </p>
+</li>
+<li><p>每次扩容大小是原来的1.5倍</p>
+</li>
+<li><p>elementData存放元素的数组</p>
+</li>
+<li><p>size 实际元素个数</p>
+</li>
+<li><p>add() 添加元素</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据结构-栈、队列"><a href="#数据结构-栈、队列" class="headerlink" title="数据结构:栈、队列"></a>数据结构:栈、队列</h2><ul>
+<li><p>栈:是一种先进后出的数据结构。</p>
+<ul>
+<li><p>stack类:继承Vector类</p>
+</li>
+<li><p>push方法入栈、pop方法出栈</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  LinkedList stack = <span class="keyword">new</span> LinkedList();</span><br><span class="line">  LinkedList stack2 = <span class="keyword">new</span> LinkedList();</span><br><span class="line">  <span class="comment">//1.入栈</span></span><br><span class="line">  stack.push(<span class="string">"吴亦凡"</span>);</span><br><span class="line">  stack.push(<span class="string">"蔡徐坤"</span>);</span><br><span class="line">  stack.push(<span class="string">"鹿晗"</span>);</span><br><span class="line">  System.out.println(stack.toString());</span><br><span class="line">  System.out.println(<span class="string">"出栈"</span>);</span><br><span class="line">  System.out.println(stack2.toString());</span><br><span class="line">  <span class="comment">//2.出栈</span></span><br><span class="line">  <span class="keyword">int</span> count = stack.size();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">    System.out.print(stack.pop() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+<ul>
+<li><p>队列:是一种先进先出的数据结构。</p>
+<ul>
+<li><p>Queue接口:继承Collection接口</p>
+</li>
+<li><p>offer方法入队、pop方法出队</p>
+</li>
+<li><p>LinkedList实现了Queue接口</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建队列</span></span><br><span class="line">  Queue queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">  <span class="comment">//1.入队(添加元素)</span></span><br><span class="line">  queue.offer(<span class="string">"吴亦凡"</span>);</span><br><span class="line">  queue.offer(<span class="string">"蔡徐坤"</span>);</span><br><span class="line">  queue.offer(<span class="string">"鹿晗"</span>);</span><br><span class="line">  System.out.println(queue.toString());</span><br><span class="line">  <span class="comment">//2.出队(删除元素)</span></span><br><span class="line">  System.out.println(<span class="string">"出队"</span>);</span><br><span class="line">  <span class="keyword">int</span> count = queue.size();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">    System.out.print(queue.poll() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Generic</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">  T t;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(T t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.t = t;</span><br><span class="line">    System.out.println(t);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Generic1</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">(T t)</span></span>&#123;</span><br><span class="line">    System.out.println(t);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestGeneric</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Generic&lt;String&gt; generic = <span class="keyword">new</span> Generic&lt;&gt;();</span><br><span class="line">    generic.show(<span class="string">"haha"</span>);</span><br><span class="line">    Generic&lt;Integer&gt; generic1 = <span class="keyword">new</span> Generic&lt;&gt;();</span><br><span class="line">    generic1.show(<span class="number">12</span>);</span><br><span class="line"></span><br><span class="line">    Generic1 generic2 = <span class="keyword">new</span> Generic1();</span><br><span class="line">    generic2.show(<span class="string">"hahaha"</span>);</span><br><span class="line">    Generic1 generic11 = <span class="keyword">new</span> Generic1();</span><br><span class="line">    generic11.show(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    TestUsb testUsb = <span class="keyword">new</span> TestUsb();</span><br><span class="line">    System.out.println(testUsb.service(<span class="keyword">new</span> Student()).toString());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><ul>
+<li><p>特点：</p>
+<ul>
+<li>无序</li>
+<li>无下标</li>
+<li>元素不可重复</li>
+</ul>
+</li>
+<li><p>方法:</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  Set&lt;Student&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">  <span class="comment">//1.添加元素</span></span><br><span class="line">  Student s1 = <span class="keyword">new</span> Student(<span class="string">"华为"</span>, <span class="number">10</span>);</span><br><span class="line">  set.add(s1);</span><br><span class="line">  set.add(<span class="keyword">new</span> Student(<span class="string">"小米"</span>, <span class="number">12</span>));</span><br><span class="line">  set.add(<span class="keyword">new</span> Student(<span class="string">"一加"</span>, <span class="number">20</span>));</span><br><span class="line">  set.add(<span class="keyword">new</span> Student(<span class="string">"魅族"</span>, <span class="number">23</span>));</span><br><span class="line">  set.add(<span class="keyword">new</span> Student(<span class="string">"锤子"</span>, <span class="number">20</span>));</span><br><span class="line">  set.add(<span class="keyword">new</span> Student(<span class="string">"小米"</span>, <span class="number">10</span>));</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + set.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + set.toString());</span><br><span class="line">  <span class="comment">//2.删除</span></span><br><span class="line">  <span class="comment">//2.1 删除一个元素</span></span><br><span class="line">  set.remove(<span class="keyword">new</span> Student(<span class="string">"锤子"</span>, <span class="number">20</span>));</span><br><span class="line">  <span class="comment">//2.2 清空</span></span><br><span class="line">  <span class="comment">//set.clear();</span></span><br><span class="line">  <span class="comment">//3.遍历</span></span><br><span class="line">  <span class="comment">//3.1 增强for</span></span><br><span class="line">  System.out.println(<span class="string">"---------------增强for--------------"</span>);</span><br><span class="line">  <span class="keyword">for</span> (Student s : set) &#123;</span><br><span class="line">    System.out.print(s.toString() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  System.out.println(<span class="string">"---------------迭代器---------------"</span>);</span><br><span class="line">  <span class="comment">//3.2 使用迭代器</span></span><br><span class="line">  Iterator&lt;Student&gt; it = set.iterator();</span><br><span class="line">  <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">    System.out.print(it.next() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  System.out.println(<span class="string">"-----------------------------------"</span>);</span><br><span class="line">  <span class="comment">//4.判断</span></span><br><span class="line">  <span class="comment">//4.1 是否存在</span></span><br><span class="line">  System.out.println(set.contains(s1));</span><br><span class="line">  <span class="comment">//4.2 是否为空</span></span><br><span class="line">  System.out.println(set.isEmpty());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h3><ul>
+<li>存储结构:哈希表</li>
+<li>存储重复依据:hashCode和equals方法</li>
+<li>存储过程:<ul>
+<li>根据hashCode计算存储位置，如果此位置没有元素，则添加。</li>
+<li>如果此位置有元素，再比较equals，如果equals相同，拒绝添加，否则形成链表添加。</li>
+</ul>
+</li>
+<li>方法:</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  HashSet&lt;Student&gt; hashSet = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">  Student s1 = <span class="keyword">new</span> Student(<span class="string">"刘备"</span>, <span class="number">10</span>);</span><br><span class="line">  Student s2 = <span class="keyword">new</span> Student(<span class="string">"关羽"</span>, <span class="number">20</span>);</span><br><span class="line">  Student s3 = <span class="keyword">new</span> Student(<span class="string">"张飞"</span>, <span class="number">13</span>);</span><br><span class="line">  <span class="comment">//1. 添加元素</span></span><br><span class="line">  hashSet.add(s1);</span><br><span class="line">  hashSet.add(s2);</span><br><span class="line">  hashSet.add(s3);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + hashSet.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + hashSet.toString());</span><br><span class="line">  <span class="comment">//2. 删除</span></span><br><span class="line">  <span class="comment">//        hashSet.remove(s1);</span></span><br><span class="line">  <span class="comment">//        System.out.println("删除之后:" + hashSet.toString());</span></span><br><span class="line">  <span class="comment">//3. 遍历</span></span><br><span class="line">  <span class="comment">//3.1 增强for</span></span><br><span class="line">  <span class="comment">//3.2 迭代器</span></span><br><span class="line">  System.out.println(<span class="string">"---------------迭代器---------------"</span>);</span><br><span class="line">  Iterator&lt;Student&gt; it = hashSet.iterator();</span><br><span class="line">  <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">    System.out.print(it.next() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  System.out.println(<span class="string">"-----------------------------------"</span>);</span><br><span class="line">  <span class="comment">//4. 判断</span></span><br><span class="line">  <span class="comment">//4.1 是否存在</span></span><br><span class="line">  System.out.println(hashSet.contains(s1));</span><br><span class="line">  <span class="comment">//4.2 是否为空</span></span><br><span class="line">  System.out.println(hashSet.isEmpty());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  TreeSet&lt;Student&gt; treeSet = <span class="keyword">new</span> TreeSet&lt;&gt;();</span><br><span class="line">  <span class="comment">//1. 添加元素</span></span><br><span class="line">  Student s1 = <span class="keyword">new</span> Student(<span class="string">"刘备"</span>, <span class="number">17</span>);</span><br><span class="line">  Student s2 = <span class="keyword">new</span> Student(<span class="string">"关羽"</span>, <span class="number">12</span>);</span><br><span class="line">  Student s3 = <span class="keyword">new</span> Student(<span class="string">"张飞"</span>, <span class="number">12</span>);</span><br><span class="line">  treeSet.add(s1);</span><br><span class="line">  treeSet.add(s2);</span><br><span class="line">  treeSet.add(s3);</span><br><span class="line">  treeSet.add(s3);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + treeSet.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + treeSet.toString());</span><br><span class="line">  <span class="comment">//2. 删除</span></span><br><span class="line">  treeSet.remove(<span class="keyword">new</span> Student(<span class="string">"刘备"</span>, <span class="number">17</span>));</span><br><span class="line">  System.out.println(<span class="string">"删除后"</span> + treeSet.toString());</span><br><span class="line">  <span class="comment">//3. 遍历</span></span><br><span class="line">  <span class="comment">//3.1 增强for</span></span><br><span class="line">  <span class="comment">//3.2 迭代器</span></span><br><span class="line">  System.out.println(<span class="string">"---------------迭代器---------------"</span>);</span><br><span class="line">  Iterator&lt;Student&gt; it = treeSet.iterator();</span><br><span class="line">  <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">    System.out.print(it.next() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  System.out.println(<span class="string">"-----------------------------------"</span>);</span><br><span class="line">  <span class="comment">//4. 判断</span></span><br><span class="line">  <span class="comment">//4.1 判断存在</span></span><br><span class="line">  System.out.println(treeSet.contains(<span class="keyword">new</span> Student(<span class="string">"张飞"</span>, <span class="number">12</span>)));</span><br><span class="line">  <span class="comment">//4.2 判断为空</span></span><br><span class="line">  System.out.println(treeSet.isEmpty());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h2><ul>
+<li><p>储存结构:红黑树</p>
+</li>
+<li><p>特点:</p>
+<ul>
+<li>无序</li>
+<li>没有下标</li>
+<li>不能重复</li>
+<li>对元素进行排序</li>
+</ul>
+</li>
+<li><p>重复依据:Comparable接口中compareTo()，如果compareTo方法返回的是0，重复元素，拒绝添加。</p>
+</li>
+<li><p>方法:</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  TreeSet&lt;Student&gt; treeSet = <span class="keyword">new</span> TreeSet&lt;&gt;();</span><br><span class="line">  <span class="comment">//1. 添加元素</span></span><br><span class="line">  Student s1 = <span class="keyword">new</span> Student(<span class="string">"刘备"</span>, <span class="number">17</span>);</span><br><span class="line">  Student s2 = <span class="keyword">new</span> Student(<span class="string">"关羽"</span>, <span class="number">12</span>);</span><br><span class="line">  Student s3 = <span class="keyword">new</span> Student(<span class="string">"张飞"</span>, <span class="number">12</span>);</span><br><span class="line">  treeSet.add(s1);</span><br><span class="line">  treeSet.add(s2);</span><br><span class="line">  treeSet.add(s3);</span><br><span class="line">  treeSet.add(s3);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + treeSet.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + treeSet.toString());</span><br><span class="line">  <span class="comment">//2. 删除</span></span><br><span class="line">  treeSet.remove(<span class="keyword">new</span> Student(<span class="string">"刘备"</span>, <span class="number">17</span>));</span><br><span class="line">  System.out.println(<span class="string">"删除后"</span> + treeSet.toString());</span><br><span class="line">  <span class="comment">//3. 遍历</span></span><br><span class="line">  <span class="comment">//3.1 增强for</span></span><br><span class="line">  <span class="comment">//3.2 迭代器</span></span><br><span class="line">  System.out.println(<span class="string">"---------------迭代器---------------"</span>);</span><br><span class="line">  Iterator&lt;Student&gt; it = treeSet.iterator();</span><br><span class="line">  <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">    System.out.print(it.next() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  System.out.println(<span class="string">"-----------------------------------"</span>);</span><br><span class="line">  <span class="comment">//4. 判断</span></span><br><span class="line">  <span class="comment">//4.1 判断存在</span></span><br><span class="line">  System.out.println(treeSet.contains(<span class="keyword">new</span> Student(<span class="string">"张飞"</span>, <span class="number">12</span>)));</span><br><span class="line">  <span class="comment">//4.2 判断为空</span></span><br><span class="line">  System.out.println(treeSet.isEmpty());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><ul>
+<li>特点:<ul>
+<li>成为”映射“存储一对数据(Key-Value)。</li>
+<li>键不可重复，值可以重复。</li>
+<li>无序、无下标。</li>
+</ul>
+</li>
+<li>方法:</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  Map&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">  <span class="comment">//1. 添加元素</span></span><br><span class="line">  map.put(<span class="string">"cn"</span>, <span class="string">"中国"</span>);</span><br><span class="line">  map.put(<span class="string">"usa"</span>, <span class="string">"美国"</span>);</span><br><span class="line">  map.put(<span class="string">"uk"</span>, <span class="string">"英国"</span>);</span><br><span class="line">  map.put(<span class="string">"kor"</span>, <span class="string">"韩国"</span>);</span><br><span class="line">  map.put(<span class="string">"usa"</span>, <span class="string">"美利坚合众国"</span>);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + map.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + map.toString());</span><br><span class="line">  <span class="comment">//2. 删除</span></span><br><span class="line">  <span class="comment">//2.1 删除单个</span></span><br><span class="line">  map.remove(<span class="string">"usa"</span>);</span><br><span class="line">  System.out.println(<span class="string">"删除之后:"</span> + map.toString());</span><br><span class="line">  <span class="comment">//2.2 清空</span></span><br><span class="line">  <span class="comment">//        map.clear();</span></span><br><span class="line">  <span class="comment">//3. 遍历</span></span><br><span class="line">  <span class="comment">//3.1 keySet()遍历:返回时键的set集合</span></span><br><span class="line">  System.out.println(<span class="string">"-----------keySet----------"</span>);</span><br><span class="line">  Set&lt;String&gt; keySets = map.keySet();</span><br><span class="line">  <span class="keyword">for</span> (String keySet : keySets) &#123;</span><br><span class="line">    System.out.print(keySet + <span class="string">"=="</span> + map.get(keySet) + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  <span class="comment">//3.2 entrySet()遍历:返回键值对映射的set的集合</span></span><br><span class="line">  System.out.println(<span class="string">"-----------entrySet----------"</span>);</span><br><span class="line">  Set&lt;Map.Entry&lt;String, String&gt;&gt; entrySets = map.entrySet();</span><br><span class="line">  <span class="keyword">for</span> (Map.Entry&lt;String, String &gt; entrySet : entrySets) &#123;</span><br><span class="line">    System.out.print(entrySet.getKey() + <span class="string">"=="</span> + entrySet.getValue() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  System.out.println(<span class="string">"-----------------------------"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//4. 判断</span></span><br><span class="line">  System.out.println(map.containsKey(<span class="string">"uk"</span>));</span><br><span class="line">  System.out.println(map.containsValue(<span class="string">"英国"</span>));</span><br><span class="line">  System.out.println(map.isEmpty());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="HashMap："><a href="#HashMap：" class="headerlink" title="HashMap："></a>HashMap：</h3><ul>
+<li><p>JDK1.2版本，线程不安全，运行效率快。</p>
+</li>
+<li><p>允许用null作为key或是value。</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  HashMap&lt;Person, String&gt; hashMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">  <span class="comment">//1. 添加元素</span></span><br><span class="line">  Person p1 = <span class="keyword">new</span> Person(<span class="string">"aaa"</span>, <span class="number">20</span>);</span><br><span class="line">  Person p2 = <span class="keyword">new</span> Person(<span class="string">"bbb"</span>, <span class="number">21</span>);</span><br><span class="line">  Person p3 = <span class="keyword">new</span> Person(<span class="string">"ccc"</span>, <span class="number">22</span>);</span><br><span class="line">  Person p4 = <span class="keyword">new</span> Person(<span class="string">"ccc"</span>, <span class="number">22</span>);</span><br><span class="line">  hashMap.put(p1, <span class="string">"北京"</span>);</span><br><span class="line">  hashMap.put(p2, <span class="string">"上海"</span>);</span><br><span class="line">  hashMap.put(p3, <span class="string">"广东"</span>);</span><br><span class="line">  hashMap.put(p3, <span class="string">"深圳"</span>);</span><br><span class="line">  hashMap.put(p4, <span class="string">"杭州"</span>);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + hashMap.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + hashMap.toString());</span><br><span class="line">  <span class="comment">//2. 删除</span></span><br><span class="line">  hashMap.remove(<span class="keyword">new</span> Person(<span class="string">"ccc"</span>, <span class="number">22</span>));</span><br><span class="line">  System.out.println(<span class="string">"删除之后:"</span> + hashMap.toString());   <span class="comment">//重写hashCode和equals后可删除</span></span><br><span class="line">  <span class="comment">//3. 遍历</span></span><br><span class="line">  <span class="comment">//3.1 使用keySet</span></span><br><span class="line">  System.out.println(<span class="string">"-----------keySet----------"</span>);</span><br><span class="line">  Set&lt;Person&gt; keySets = hashMap.keySet();</span><br><span class="line">  <span class="keyword">for</span> (Person keySet : keySets) &#123;</span><br><span class="line">    System.out.print(keySet + <span class="string">"=="</span> + hashMap.get(keySet) + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  <span class="comment">//3.2 entrySet()遍历:返回键值对映射的set的集合</span></span><br><span class="line">  System.out.println(<span class="string">"-----------entrySet----------"</span>);</span><br><span class="line">  Set&lt;Map.Entry&lt;Person, String&gt;&gt; entrySets = hashMap.entrySet();</span><br><span class="line">  <span class="keyword">for</span> (Map.Entry&lt;Person, String &gt; entrySet : entrySets) &#123;</span><br><span class="line">    System.out.print(entrySet.getKey() + <span class="string">"=="</span> + entrySet.getValue() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  System.out.println(<span class="string">"-----------------------------"</span>);</span><br><span class="line">  <span class="comment">//4. 判断</span></span><br><span class="line">  System.out.println(hashMap.containsKey(<span class="keyword">new</span> Person(<span class="string">"bbb"</span>, <span class="number">21</span>)));</span><br><span class="line">  System.out.println(hashMap.containsValue(<span class="string">"上海"</span>));</span><br><span class="line">  System.out.println(hashMap.isEmpty());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap:"></a>TreeMap:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//创建集合</span></span><br><span class="line">  TreeMap&lt;Person, String&gt; treeMap = <span class="keyword">new</span> TreeMap&lt;&gt;();</span><br><span class="line">  Person p1 = <span class="keyword">new</span> Person(<span class="string">"aaa"</span>, <span class="number">20</span>);</span><br><span class="line">  Person p2 = <span class="keyword">new</span> Person(<span class="string">"bbb"</span>, <span class="number">21</span>);</span><br><span class="line">  Person p3 = <span class="keyword">new</span> Person(<span class="string">"ccc"</span>, <span class="number">22</span>);</span><br><span class="line">  <span class="comment">//1. 添加元素</span></span><br><span class="line">  treeMap.put(p1, <span class="string">"北京"</span>);</span><br><span class="line">  treeMap.put(p2, <span class="string">"上海"</span>);</span><br><span class="line">  treeMap.put(p3, <span class="string">"广东"</span>);</span><br><span class="line">  System.out.println(<span class="string">"元素个数:"</span> + treeMap.size());</span><br><span class="line">  System.out.println(<span class="string">"直接打印:"</span> + treeMap.toString());</span><br><span class="line">  <span class="comment">//2. 删除</span></span><br><span class="line">  treeMap.remove(<span class="keyword">new</span> Person(<span class="string">"bbb"</span>, <span class="number">21</span>));</span><br><span class="line">  System.out.println(<span class="string">"删除之后:"</span> + treeMap.toString());</span><br><span class="line">  <span class="comment">//3. 遍历</span></span><br><span class="line">  <span class="comment">//3.1 keySet</span></span><br><span class="line">  Set&lt;Person&gt; keySets = treeMap.keySet();</span><br><span class="line">  <span class="keyword">for</span> (Person keySet : keySets) &#123;</span><br><span class="line">    System.out.print(keySet + <span class="string">"=="</span> + treeMap.get(keySet) + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">  <span class="comment">//3.2 entrySet</span></span><br><span class="line">  Set&lt;Map.Entry&lt;Person, String&gt;&gt; entries = treeMap.entrySet();</span><br><span class="line">  <span class="keyword">for</span> (Map.Entry&lt;Person, String&gt; entrySet : entries) &#123;</span><br><span class="line">    System.out.print(entrySet.getKey() + <span class="string">"=="</span> + entrySet.getValue() + <span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://replica.me/2020/07/30/异常/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1525,132 +1825,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://replica.me/2019/09/02/今天加入了hexo，欢迎来到ReplicaSensei的星球/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ReplicaSensei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/img/head01.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Valley of End">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/02/今天加入了hexo，欢迎来到ReplicaSensei的星球/" itemprop="url">今天加入了hexo，欢迎来到ReplicaSensei的星球</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-02T02:14:34+08:00">
-                2019-09-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="了解途径"><a href="#了解途径" class="headerlink" title="了解途径"></a>了解途径</h2><p>B站up主：<a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a></p>
-<p><a href="https://www.bilibili.com/video/av44544186" target="_blank" rel="noopener">CodeSheep手把手教你从0开始搭建自己的个人博客</a></p>
-<p>大家可以跟随这个up主学习很多程序员的干货！</p>
-<p>以此来纪念我的第一篇博客</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1696,7 +1877,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1709,7 +1890,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
